@@ -1,0 +1,32 @@
+server:
+  port: 9501
+
+spring:
+  application:
+    name: user-service
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: lucky_tx_group
+    nacos:
+      discovery:
+        server-addr: 81.71.68.124:8848
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://81.71.68.124:33061/user?serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+feign:
+  hystrix:
+    enabled: false
+
+logging:
+  level:
+    io:
+      seata: info
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
+
