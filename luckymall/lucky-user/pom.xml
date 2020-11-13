@@ -50,6 +50,16 @@
             <artifactId>seata-all</artifactId>
             <version>0.9.0</version>
         </dependency>
+        <!--SpringCloud ailibaba sentinel-datasource-nacos 后续做持久化用到-->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
+        </dependency>
+        <!--SpringCloud ailibaba sentinel -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
         <!--feign-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -88,7 +98,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.atguigu.springcloud.OrderMain80</mainClass>
+                    <mainClass>com.luckymall.UserApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
