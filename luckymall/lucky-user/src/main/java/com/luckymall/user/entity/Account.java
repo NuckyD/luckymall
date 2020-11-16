@@ -1,4 +1,4 @@
-package com.luckymall.entity;
+package com.luckymall.user.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

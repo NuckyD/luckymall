@@ -1,4 +1,4 @@
-package com.luckymall.service;
+package com.luckymall.user.service;
 
 import org.springframework.web.bind.annotation.RequestParam;
 

@@ -1,4 +1,4 @@
-package com.luckymall.config;
+package com.luckymall.user.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import io.seata.rm.datasource.DataSourceProxy;

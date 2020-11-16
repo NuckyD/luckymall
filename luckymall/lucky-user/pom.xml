@@ -98,7 +98,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.luckymall.UserApplication</mainClass>
+                    <mainClass>com.luckymall.user.UserApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

@@ -1,15 +1,14 @@
-package com.luckymall.service.impl;
+package com.luckymall.user.service.impl;
 
 
-import com.luckymall.dao.AccountDao;
-import com.luckymall.service.AccountService;
+import com.luckymall.user.dao.AccountDao;
+import com.luckymall.user.service.AccountService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.math.BigDecimal;
-import java.util.concurrent.TimeUnit;
 
 /**
  * 账户业务实现类

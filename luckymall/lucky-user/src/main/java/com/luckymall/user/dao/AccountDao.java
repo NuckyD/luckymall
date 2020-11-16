@@ -1,4 +1,4 @@
-package com.luckymall.dao;
+package com.luckymall.user.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

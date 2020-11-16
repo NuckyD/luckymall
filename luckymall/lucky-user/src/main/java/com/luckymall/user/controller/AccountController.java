@@ -1,6 +1,6 @@
-package com.luckymall.controller;
+package com.luckymall.user.controller;
 
-import com.luckymall.service.AccountService;
+import com.luckymall.user.service.AccountService;
 import com.luckymall.util.ResponseUtil;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

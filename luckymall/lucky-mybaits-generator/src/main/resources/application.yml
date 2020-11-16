@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://81.71.68.124:33061/user?serverTimezone=GMT%2B8
+      username: root
+      password: 123456
