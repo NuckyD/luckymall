@@ -13,6 +13,7 @@
         <module>lucky-common</module>
         <module>lucky-user</module>
         <module>lucky-mybaits-generator</module>
+        <module>lucky-admin</module>
     </modules>
 
 
