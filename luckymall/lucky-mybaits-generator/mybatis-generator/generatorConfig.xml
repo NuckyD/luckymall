@@ -43,7 +43,7 @@
 
         <!--数据库连接信息-->
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://81.71.68.124:33061/user?serverTimezone=GMT%2B8"
+                        connectionURL="jdbc:mysql://81.71.68.124:33061/admin?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC&amp;verifyServerCertificate=false&amp;useSSL=false&amp;nullCatalogMeansCurrent=true"
                         userId="root"
                         password="123456"/>
 
@@ -55,73 +55,82 @@
         <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.luckymall.mbg.dao"
                              targetProject="src/main/java"/>
+
+        <!--<table tableName="lucky_role">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>-->
+        <table tableName="lucky_log">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
         <!--表名-->
-        <table tableName="t_account">
+       <!-- <table tableName="lucky_admin">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <columnOverride column="role_ids" javaType="java.lang.Integer[]"
+                            typeHandler="org.linlinjava.lucky.db.mybatis.JsonIntegerArrayTypeHandler"/>
+        </table>-->
+        <!--<table tableName="lucky_address">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <!--<table tableName="litemall_address">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-        <table tableName="litemall_admin">
+        <table tableName="lucky_admin">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="role_ids" javaType="java.lang.Integer[]"
                             typeHandler="com.luckymall.mbg.mybatis.JsonIntegerArrayTypeHandler"/>
         </table>
-        <table tableName="litemall_brand">
+        <table tableName="lucky_brand">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_cart">
+        <table tableName="lucky_cart">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="specifications" javaType="java.lang.String[]"
                             typeHandler="com.luckymall.mbg.mybatis.JsonStringArrayTypeHandler"/>
         </table>
-        <table tableName="litemall_category">
+        <table tableName="lucky_category">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_collect">
+        <table tableName="lucky_collect">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_comment">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-            <columnOverride column="pic_urls" javaType="java.lang.String[]"
-                            typeHandler="com.luckymall.mbg.mybatis.JsonStringArrayTypeHandler"/>
-        </table>
-
-        <table tableName="litemall_feedback">
+        <table tableName="lucky_comment">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="pic_urls" javaType="java.lang.String[]"
                             typeHandler="com.luckymall.mbg.mybatis.JsonStringArrayTypeHandler"/>
         </table>
 
-        <table tableName="litemall_footprint">
+        <table tableName="lucky_feedback">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <columnOverride column="pic_urls" javaType="java.lang.String[]"
+                            typeHandler="com.luckymall.mbg.mybatis.JsonStringArrayTypeHandler"/>
+        </table>
+
+        <table tableName="lucky_footprint">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_goods">
+        <table tableName="lucky_goods">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="gallery" javaType="java.lang.String[]"
                             typeHandler="com.luckymall.mbg.mybatis.JsonStringArrayTypeHandler"/>
         </table>
-        <table tableName="litemall_goods_attribute">
+        <table tableName="lucky_goods_attribute">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_goods_specification">
+        <table tableName="lucky_goods_specification">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_goods_product">
+        <table tableName="lucky_goods_product">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="specifications" javaType="java.lang.String[]"
                             typeHandler="com.luckymall.mbg.mybatis.JsonStringArrayTypeHandler"/>
         </table>
-        <table tableName="litemall_issue">
+        <table tableName="lucky_issue">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_keyword">
+        <table tableName="lucky_keyword">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_order">
+        <table tableName="lucky_order">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_order_goods">
+        <table tableName="lucky_order_goods">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="specifications" javaType="java.lang.String[]"
                             typeHandler="com.luckymall.mbg.mybatis.JsonStringArrayTypeHandler"/>
@@ -129,57 +138,53 @@
                             typeHandler="com.luckymall.mbg.mybatis.JsonIntegerArrayTypeHandler"/>
 
         </table>
-        <table tableName="litemall_region">
+        <table tableName="lucky_region">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_search_history">
+        <table tableName="lucky_search_history">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_storage">
+        <table tableName="lucky_storage">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_topic">
+        <table tableName="lucky_topic">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="goods" javaType="java.lang.Integer[]"
                             typeHandler="com.luckymall.mbg.mybatis.JsonIntegerArrayTypeHandler"/>
         </table>
-        <table tableName="litemall_user">
+        <table tableName="lucky_user">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_system">
+        <table tableName="lucky_system">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
 
-        <table tableName="litemall_groupon_rules">
+        <table tableName="lucky_groupon_rules">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_groupon">
+        <table tableName="lucky_groupon">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_coupon">
+        <table tableName="lucky_coupon">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="goods_value" javaType="java.lang.Integer[]"
                             typeHandler="com.luckymall.mbg.mybatis.JsonIntegerArrayTypeHandler"/>
         </table>
-        <table tableName="litemall_coupon_user">
+        <table tableName="lucky_coupon_user">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_role">
+
+        <table tableName="lucky_permission">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_permission">
+
+        <table tableName="lucky_notice">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_log">
+        <table tableName="lucky_notice_admin">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <table tableName="litemall_notice">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-        <table tableName="litemall_notice_admin">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-        <table tableName="litemall_aftersale">
+        <table tableName="lucky_aftersale">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="pictures" javaType="java.lang.String[]"
                             typeHandler="com.luckymall.mbg.mybatis.JsonStringArrayTypeHandler"/>

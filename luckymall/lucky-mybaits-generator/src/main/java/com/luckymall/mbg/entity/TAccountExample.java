@@ -1092,6 +1092,6 @@ public class TAccountExample {
          *
          * @mbg.generated
          */
-        void example(com.luckymall.mbg.entity.TAccountExample example);
+        void example(TAccountExample example);
     }
 }

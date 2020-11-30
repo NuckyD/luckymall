@@ -14,6 +14,9 @@
         <module>lucky-user</module>
         <module>lucky-mybaits-generator</module>
         <module>lucky-admin</module>
+        <module>lucky-admin</module>
+        <module>lucky-administration</module>
+        <module>lucky-admin2</module>
     </modules>
 
 
