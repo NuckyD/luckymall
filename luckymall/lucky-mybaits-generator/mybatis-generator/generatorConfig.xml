@@ -82,7 +82,7 @@
         <table tableName="lucky_cart">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="specifications" javaType="java.lang.String[]"
-                            typeHandler="com.luckymall.mbg.mybatis.JsonStringArrayTypeHandler"/>
+                            typeHandler="com.luckymall.util.JsonStringArrayTypeHandler"/>
         </table>
         <table tableName="lucky_category">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
@@ -93,13 +93,13 @@
         <table tableName="lucky_comment">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="pic_urls" javaType="java.lang.String[]"
-                            typeHandler="com.luckymall.mbg.mybatis.JsonStringArrayTypeHandler"/>
+                            typeHandler="com.luckymall.util.JsonStringArrayTypeHandler"/>
         </table>
 
         <table tableName="lucky_feedback">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="pic_urls" javaType="java.lang.String[]"
-                            typeHandler="com.luckymall.mbg.mybatis.JsonStringArrayTypeHandler"/>
+                            typeHandler="com.luckymall.util.JsonStringArrayTypeHandler"/>
         </table>
 
         <table tableName="lucky_footprint">
@@ -108,7 +108,7 @@
         <table tableName="lucky_goods">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="gallery" javaType="java.lang.String[]"
-                            typeHandler="com.luckymall.mbg.mybatis.JsonStringArrayTypeHandler"/>
+                            typeHandler="com.luckymall.util.JsonStringArrayTypeHandler"/>
         </table>
         <table tableName="lucky_goods_attribute">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
@@ -119,7 +119,7 @@
         <table tableName="lucky_goods_product">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="specifications" javaType="java.lang.String[]"
-                            typeHandler="com.luckymall.mbg.mybatis.JsonStringArrayTypeHandler"/>
+                            typeHandler="com.luckymall.util.JsonStringArrayTypeHandler"/>
         </table>
         <table tableName="lucky_issue">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
@@ -133,7 +133,7 @@
         <table tableName="lucky_order_goods">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="specifications" javaType="java.lang.String[]"
-                            typeHandler="com.luckymall.mbg.mybatis.JsonStringArrayTypeHandler"/>
+                            typeHandler="com.luckymall.util.JsonStringArrayTypeHandler"/>
             <columnOverride column="comments" javaType="java.lang.Integer[]"
                             typeHandler="com.luckymall.mbg.mybatis.JsonIntegerArrayTypeHandler"/>
 
@@ -187,7 +187,7 @@
         <table tableName="lucky_aftersale">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="pictures" javaType="java.lang.String[]"
-                            typeHandler="com.luckymall.mbg.mybatis.JsonStringArrayTypeHandler"/>
+                            typeHandler="com.luckymall.util.JsonStringArrayTypeHandler"/>
         </table>-->
     </context>
 </generatorConfiguration>

@@ -1,4 +1,4 @@
-package com.luckymall.mbg.mybatis;
+package com.luckymall.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.ibatis.type.BaseTypeHandler;
@@ -10,32 +10,32 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /*
-   <columnOverride column="ids" javaType="java.lang.Integer[]" typeHandler="JsonIntegerArrayTypeHandler"/>
+   <columnOverride column="urls" javaType="java.lang.String[]" typeHandler="JsonStringArrayTypeHandler"/>
  */
-public class JsonIntegerArrayTypeHandler extends BaseTypeHandler<Integer[]> {
+public class JsonStringArrayTypeHandler extends BaseTypeHandler<String[]> {
     private static final ObjectMapper mapper = new ObjectMapper();
 
     @Override
-    public void setNonNullParameter(PreparedStatement ps, int i, Integer[] parameter, JdbcType jdbcType) throws SQLException {
+    public void setNonNullParameter(PreparedStatement ps, int i, String[] parameter, JdbcType jdbcType) throws SQLException {
         ps.setString(i, toJson(parameter));
     }
 
     @Override
-    public Integer[] getNullableResult(ResultSet rs, String columnName) throws SQLException {
+    public String[] getNullableResult(ResultSet rs, String columnName) throws SQLException {
         return this.toObject(rs.getString(columnName));
     }
 
     @Override
-    public Integer[] getNullableResult(ResultSet rs, int columnIndex) throws SQLException {
+    public String[] getNullableResult(ResultSet rs, int columnIndex) throws SQLException {
         return this.toObject(rs.getString(columnIndex));
     }
 
     @Override
-    public Integer[] getNullableResult(CallableStatement cs, int columnIndex) throws SQLException {
+    public String[] getNullableResult(CallableStatement cs, int columnIndex) throws SQLException {
         return this.toObject(cs.getString(columnIndex));
     }
 
-    private String toJson(Integer[] params) {
+    private String toJson(String[] params) {
         try {
             return mapper.writeValueAsString(params);
         } catch (Exception e) {
@@ -44,10 +44,10 @@ public class JsonIntegerArrayTypeHandler extends BaseTypeHandler<Integer[]> {
         return "[]";
     }
 
-    private Integer[] toObject(String content) {
+    private String[] toObject(String content) {
         if (content != null && !content.isEmpty()) {
             try {
-                return (Integer[]) mapper.readValue(content, Integer[].class);
+                return (String[]) mapper.readValue(content, String[].class);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }

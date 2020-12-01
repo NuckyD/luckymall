@@ -1,5 +1,6 @@
 package com.luckymall.admin.Log;
 
+import com.luckymall.admin.entity.LuckyAdmin;
 import com.luckymall.admin.entity.LuckyLog;
 import com.luckymall.admin.service.LuckyLogService;
 import com.luckymall.util.IpUtil;

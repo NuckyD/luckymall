@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.luckymall.mbg.dao.LuckyPermissionMapper">
+<mapper namespace="com.luckymall.admin.dao.LuckyPermissionMapper">
   <resultMap id="BaseResultMap" type="com.luckymall.admin.entity.LuckyPermission">
     <!--
       WARNING - @mbg.generated

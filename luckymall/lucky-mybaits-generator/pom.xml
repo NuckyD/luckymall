@@ -12,7 +12,11 @@
     <artifactId>lucky-mybait-generate</artifactId>
 
     <dependencies>
-
+        <dependency>
+            <groupId>luckymall</groupId>
+            <artifactId>lucky-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-json</artifactId>

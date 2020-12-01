@@ -1909,6 +1909,6 @@ public class LuckyLogExample {
          *
          * @mbg.generated
          */
-        void example(com.luckymall.mbg.entity.LuckyLogExample example);
+        void example(LuckyLogExample example);
     }
 }
