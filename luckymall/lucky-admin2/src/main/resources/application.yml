@@ -5,16 +5,16 @@ spring:
   application:
     name: admin-service
   cloud:
-#    alibaba:
-#      seata:
-#        tx-service-group: lucky_tx_group
+    alibaba:
+      seata:
+        tx-service-group: lucky_tx_group
     nacos:
       discovery:
         server-addr: 81.71.68.124:8848
         #server-addr: localhost:8848
     sentinel:
       transport:
-        dashboard: 81.71.68.124:8080 #配置Sentinel dashboard地址
+        dashboard: 81.71.68.124:9090 #配置Sentinel dashboard地址
         port: 8719
       datasource:
         ds1:

@@ -3,7 +3,7 @@ package com.luckymall.admin.service;
 import com.github.pagehelper.PageHelper;
 import com.luckymall.admin.dao.LuckyAdminMapper;
 import com.luckymall.admin.entity.LuckyAdmin;
-import com.luckymall.admin.entity.LuckyAdmin.*;
+import com.luckymall.admin.entity.LuckyAdmin.Column;
 import com.luckymall.admin.entity.LuckyAdminExample;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -14,7 +14,7 @@ import java.util.List;
 
 @Service
 public class LuckyAdminService {
-    private final Column[] result = new LuckyAdmin.Column[]{Column.id, Column.username, Column.avatar, Column.roleIds};
+    private final Column[] result = new Column[]{Column.id, Column.username, Column.avatar, Column.roleIds};
     @Resource
     private LuckyAdminMapper adminMapper;
 

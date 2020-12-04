@@ -1,8 +1,8 @@
 package com.luckymall.admin.config;
 
+import org.apache.shiro.mgt.SecurityManager;
 import com.luckymall.admin.shiro.AdminAuthorizingRealm;
 import com.luckymall.admin.shiro.AdminWebSessionManager;
-import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.realm.Realm;
 import org.apache.shiro.session.mgt.SessionManager;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
