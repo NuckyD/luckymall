@@ -1,0 +1,45 @@
+server:
+  port: 9701
+
+spring:
+  application:
+    name: goods-service
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: lucky_tx_group
+    nacos:
+      discovery:
+        server-addr: 81.71.68.124:8848
+        #server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: 81.71.68.124:9090 #配置Sentinel dashboard地址
+        port: 8719
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 81.71.68.124:8848
+            dataId: user-sentinel-service
+            groupId: lucky-mall
+            data-type: json
+            rule-type: flow
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://81.71.68.124:33061/admin?serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+feign:
+  hystrix:
+    enabled: false
+
+logging:
+  level:
+    io:
+      seata: info
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
+
