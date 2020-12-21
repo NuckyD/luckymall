@@ -26,7 +26,7 @@ spring:
             rule-type: flow
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://81.71.68.124:33061/admin?serverTimezone=GMT%2B8
+    url: jdbc:mysql://81.71.68.124:33061/lucky-admin?serverTimezone=GMT%2B8
     username: root
     password: 123456
 

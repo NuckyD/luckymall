@@ -42,11 +42,14 @@
         </commentGenerator>
 
         <!--数据库连接信息-->
+     <!--   <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://81.71.68.124:33061/lucky-admin?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC&amp;verifyServerCertificate=false&amp;useSSL=false&amp;nullCatalogMeansCurrent=true"
+                        userId="root"
+                        password="123456"/>-->
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://81.71.68.124:33061/admin?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC&amp;verifyServerCertificate=false&amp;useSSL=false&amp;nullCatalogMeansCurrent=true"
+                        connectionURL="jdbc:mysql://81.71.68.124:33061/lucky-goods?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC&amp;verifyServerCertificate=false&amp;useSSL=false&amp;nullCatalogMeansCurrent=true"
                         userId="root"
                         password="123456"/>
-
         <javaTypeResolver>
             <property name="useJSR310Types" value="true"/>
         </javaTypeResolver>
@@ -75,37 +78,43 @@
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="role_ids" javaType="java.lang.Integer[]"
                             typeHandler="com.luckymall.mbg.mybatis.JsonIntegerArrayTypeHandler"/>
-        </table>
-        <table tableName="lucky_brand">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
+        </table>-->
+        <!--
+                <table tableName="lucky_brand">
+                    <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+                </table>
+                -->
+        <!--
         <table tableName="lucky_cart">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="specifications" javaType="java.lang.String[]"
                             typeHandler="com.luckymall.util.JsonStringArrayTypeHandler"/>
         </table>
-        <table tableName="lucky_category">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-        <table tableName="lucky_collect">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-        <table tableName="lucky_comment">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-            <columnOverride column="pic_urls" javaType="java.lang.String[]"
-                            typeHandler="com.luckymall.util.JsonStringArrayTypeHandler"/>
-        </table>
+        -->
 
-        <table tableName="lucky_feedback">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-            <columnOverride column="pic_urls" javaType="java.lang.String[]"
-                            typeHandler="com.luckymall.util.JsonStringArrayTypeHandler"/>
-        </table>
+                <table tableName="lucky_category">
+                    <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+                </table>
+        <!--
+                <table tableName="lucky_collect">
+                    <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+                </table>
+                <table tableName="lucky_comment">
+                    <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+                    <columnOverride column="pic_urls" javaType="java.lang.String[]"
+                                    typeHandler="com.luckymall.util.JsonStringArrayTypeHandler"/>
+                </table>
 
-        <table tableName="lucky_footprint">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-        <table tableName="lucky_goods">
+                <table tableName="lucky_feedback">
+                    <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+                    <columnOverride column="pic_urls" javaType="java.lang.String[]"
+                                    typeHandler="com.luckymall.util.JsonStringArrayTypeHandler"/>
+                </table>
+
+                <table tableName="lucky_footprint">
+                    <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+                </table>-->
+       <!-- <table tableName="lucky_goods">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="gallery" javaType="java.lang.String[]"
                             typeHandler="com.luckymall.util.JsonStringArrayTypeHandler"/>
@@ -120,7 +129,8 @@
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride column="specifications" javaType="java.lang.String[]"
                             typeHandler="com.luckymall.util.JsonStringArrayTypeHandler"/>
-        </table>
+        </table>-->
+        <!--
         <table tableName="lucky_issue">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
